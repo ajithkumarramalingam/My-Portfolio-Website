@@ -1,0 +1,184 @@
+/* Custom Styles for Skills Badges and Other Components */
+
+/* Navbar Styles */
+.nav-link {
+  @apply text-gray-300 hover:text-accent-primary transition-colors duration-300 relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+#navbar.scrolled {
+  @apply bg-dark-bg/95 backdrop-blur-lg border-b border-dark-border shadow-lg;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+  @apply transition-all duration-300 ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#mobile-menu.open {
+  max-height: 500px;
+}
+
+/* Skills Badge Styles */
+.skill-badge {
+  @apply inline-flex items-center gap-3 px-5 py-3 bg-dark-card border-2 border-dark-border rounded-full text-gray-200 font-medium transition-all duration-300 cursor-pointer relative overflow-hidden;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInScale 0.6s ease-out backwards;
+}
+
+.skill-badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--skill-color, #3b82f6), rgba(139, 92, 246, 0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-badge:hover {
+  @apply transform -translate-y-1 scale-105;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
+  border-color: var(--skill-color, #3b82f6);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(var(--skill-color-rgb, 59, 130, 246), 0.4);
+}
+
+.skill-badge:hover::before {
+  opacity: 1;
+}
+
+.skill-badge:hover .skill-icon {
+  transform: scale(1.2) rotate(360deg);
+}
+
+.skill-badge:hover .skill-name {
+  color: var(--skill-color, #3b82f6);
+}
+
+.skill-icon {
+  @apply text-2xl font-black flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 transition-all duration-400;
+  text-shadow: 0 2px 8px currentColor;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.skill-name {
+  @apply relative z-10 text-base leading-tight;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  text-align: left;
+}
+
+.skill-shine {
+  @apply absolute top-0 left-0 w-1/2 h-full bg-white/15;
+  transform: translateX(-100%) skewX(-20deg);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.skill-badge:hover .skill-shine {
+  transform: translateX(200%) skewX(-20deg);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Contact Card Items */
+.contact-card-item {
+  @apply flex items-center gap-4 p-4 rounded-lg border border-dark-border hover:border-accent-primary/40 transition-all duration-300 hover:bg-dark-card/50;
+}
+
+.contact-icon-box {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg;
+  flex-shrink: 0;
+}
+
+.contact-card-item:hover .contact-icon-box {
+  @apply scale-110;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Form Input Floating Labels */
+.input-wrapper.focused .form-label,
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  @apply -top-2.5 left-2 text-xs text-accent-primary bg-dark-bg px-2;
+  transform: translateY(0);
+}
+
+.input-wrapper.focused .input-border,
+.form-input:focus ~ .input-border {
+  transform: scaleX(1);
+}
+
+/* Form Message Styles */
+.form-message {
+  @apply p-3 rounded-lg text-sm text-center;
+}
+
+.form-message:not(.error) {
+  @apply bg-green-500/20 text-green-400 border border-green-500/30;
+}
+
+.form-message.error {
+  @apply bg-red-500/20 text-red-400 border border-red-500/30;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .skill-badge {
+    @apply px-4 py-2.5 gap-2.5;
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .skill-icon {
+    @apply w-7 h-7 text-lg;
+  }
+
+  .skill-name {
+    @apply text-sm;
+  }
+}
+
+/* Animation for underline */
+@keyframes scaleX {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+

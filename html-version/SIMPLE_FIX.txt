@@ -1,0 +1,71 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO FIX THE EMAIL ERROR - 2 MINUTES
+═══════════════════════════════════════════════════════════════
+
+ERROR YOU SEE:
+"Email service not configured. Please set up Formspree..."
+
+WHY:
+Line 274 in js/main.js has: const FORMPREE_FORM_ID = 'YOUR_FORM_ID';
+You need to replace 'YOUR_FORM_ID' with your actual Form ID.
+
+═══════════════════════════════════════════════════════════════
+STEP 1: GET YOUR FORM ID (1 minute)
+═══════════════════════════════════════════════════════════════
+
+1. Open: https://formspree.io/
+2. Click: "Get Started" (FREE button, top right)
+3. Sign up (use Google/GitHub or email - takes 30 seconds)
+4. Click: "New Form" (big button)
+5. Enter:
+   - Form Name: Portfolio Contact
+   - Email: ajith.ak.official06@gmail.com
+6. Click: "Create Form"
+7. Look at the URL - it will show:
+   https://formspree.io/f/xrgkqjpn
+                              ^^^^^^^^
+                              THIS IS YOUR FORM ID!
+8. Copy the Form ID (the letters/numbers after /f/)
+
+═══════════════════════════════════════════════════════════════
+STEP 2: UPDATE THE CODE (30 seconds)
+═══════════════════════════════════════════════════════════════
+
+1. Open file: html-version/js/main.js
+2. Go to line 274
+3. Find this line:
+   const FORMPREE_FORM_ID = 'YOUR_FORM_ID';
+4. Replace 'YOUR_FORM_ID' with your Form ID:
+   const FORMPREE_FORM_ID = 'xrgkqjpn';  ← Your Form ID here
+5. Save the file (Ctrl+S or Cmd+S)
+
+═══════════════════════════════════════════════════════════════
+STEP 3: TEST IT (30 seconds)
+═══════════════════════════════════════════════════════════════
+
+1. Refresh your browser (F5 or Ctrl+R)
+2. Go to Contact section
+3. Fill the form
+4. Click "Send Message"
+5. ✅ Error will be gone!
+6. Check email: ajith.ak.official06@gmail.com
+7. ✅ You'll receive the message!
+
+═══════════════════════════════════════════════════════════════
+EXAMPLE:
+═══════════════════════════════════════════════════════════════
+
+BEFORE (line 274):
+const FORMPREE_FORM_ID = 'YOUR_FORM_ID';  ❌
+
+AFTER (with your Form ID):
+const FORMPREE_FORM_ID = 'xrgkqjpn';  ✅
+
+═══════════════════════════════════════════════════════════════
+YOUR EMAIL: ajith.ak.official06@gmail.com
+═══════════════════════════════════════════════════════════════
+
+Once configured, all form messages will be sent to this email!
+
+═══════════════════════════════════════════════════════════════
+

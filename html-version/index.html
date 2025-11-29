@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="description" content="Ajith Kumar R - Full Stack Developer Portfolio. Specialized in Angular, NestJS, Ionic, and MySQL.">
+  <meta name="keywords" content="Full Stack Developer, Angular, NestJS, Ionic, MySQL, TypeScript, JavaScript">
+  <meta name="author" content="Ajith Kumar R">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ajith Kumar R - Full Stack Developer Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Security Headers (Note: CSP may need adjustment based on hosting) -->
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="custom-scrollbar">
+  
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar-ultimate">
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <div class="logo-box">
+          <span class="logo-initials">AK</span>
+        </div>
+        <span class="logo-text">Ajith Kumar</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-menu">
+        <a href="#home" class="nav-link-ultimate" data-nav="home">
+          <span>Home</span>
+        </a>
+        <a href="#about" class="nav-link-ultimate" data-nav="about">
+          <span>About</span>
+        </a>
+        <a href="#skills" class="nav-link-ultimate" data-nav="skills">
+          <span>Skills</span>
+        </a>
+        <a href="#projects" class="nav-link-ultimate" data-nav="projects">
+          <span>Projects</span>
+        </a>
+        <a href="#contact" class="nav-link-ultimate" data-nav="contact">
+          <span>Contact</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-button" class="nav-toggle" aria-label="Toggle menu">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="nav-mobile">
+      <div class="mobile-content">
+        <a href="#home" class="mobile-link">
+          <span class="mobile-link-text">Home</span>
+        </a>
+        <a href="#about" class="mobile-link">
+          <span class="mobile-link-text">About</span>
+        </a>
+        <a href="#skills" class="mobile-link">
+          <span class="mobile-link-text">Skills</span>
+        </a>
+        <a href="#projects" class="mobile-link">
+          <span class="mobile-link-text">Projects</span>
+        </a>
+        <a href="#contact" class="mobile-link">
+          <span class="mobile-link-text">Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <!-- Animated Background -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-primary/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-secondary/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-2 gradient-text">Hi, I'm Ajith Kumar R</h1>
+      <p class="text-2xl md:text-3xl text-accent-hover mb-4 font-medium">Full Stack Developer</p>
+      <p class="text-lg md:text-xl text-gray-500 mb-6">
+        <span class="text-accent-primary font-semibold">3+ Products</span> • <span class="text-accent-primary font-semibold">1 Project</span> • <span class="text-accent-primary font-semibold">2.7+ Years</span> Experience
+      </p>
+      <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
+        Specialized in Angular, NestJS, Ionic, and MySQL. Building modern, scalable applications 
+        with a focus on clean code and exceptional user experience.
+      </p>
+
+      <div class="flex justify-center space-x-6 mb-12">
+        <a href="https://x.com/03_mct60800" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="X (Twitter)" aria-label="X (Twitter)">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ajith-kumar-0127-ak/" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="LinkedIn" aria-label="LinkedIn">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/ajithkumarramalingam" target="_blank" rel="noopener noreferrer" class="text-3xl text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="GitHub" aria-label="GitHub">
+          <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+
+      <button id="view-work-btn" type="button" class="px-8 py-3 bg-accent-primary text-white rounded-lg font-semibold hover:bg-accent-hover transition-all duration-300 shadow-lg shadow-accent-primary/50 hover:scale-105 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-dark-bg">
+        View My Work
+      </button>
+    </div>
+
+    <button id="scroll-down-btn" type="button" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-accent-primary transition-colors animate-bounce-slow focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-dark-bg rounded-full p-2" aria-label="Scroll to about">
+      <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+      </svg>
+    </button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-surface">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-accent-primary">About Me</h2>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="glass border border-dark-border rounded-lg p-8 hover:border-accent-primary transition-colors">
+          <h3 class="text-2xl font-semibold mb-4 text-accent-primary">Who I Am</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            I'm Ajith Kumar R, a Full Stack Developer with expertise in Angular, NestJS, Ionic, and MySQL. 
+            I specialize in building modern, scalable web and mobile applications that solve real-world problems.
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            With experience in biometric integration (API & Parallel DB), external application API integration, 
+            and database design, I bring a comprehensive approach to full-stack development. I'm skilled in 
+            creating ER diagrams and understanding complex project flows.
+          </p>
+          <p class="text-gray-400 leading-relaxed">
+            My passion lies in writing clean, maintainable code and delivering solutions that are both 
+            efficient and user-friendly. I enjoy tackling challenging problems and continuously learning 
+            new technologies to stay at the forefront of development.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <div class="glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-colors">
+            <h4 class="text-xl font-semibold mb-3 text-accent-primary">Experience</h4>
+            <p class="text-gray-400 leading-relaxed">
+              I have developed three products and one project, including an attendance management system 
+              (2.7 years), a food ordering platform similar to Swiggy and Zomato (4 months), a finance 
+              management project (2 months), and a US event management system (1 month).
+            </p>
+          </div>
+
+          <div class="glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-colors">
+            <h4 class="text-xl font-semibold mb-3 text-accent-primary">Expertise</h4>
+            <p class="text-gray-400 leading-relaxed">
+              My technical expertise spans TypeScript, JavaScript, Angular, Ionic, MySQL, HTML, CSS, and SCSS. 
+              I specialize in biometric integration, API development, and creating seamless integrations 
+              between different systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-bg relative overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text relative inline-block">
+          <span class="relative">
+            Skills & Technologies
+            <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-primary to-accent-secondary rounded transform scale-x-0 animate-[scaleX_1s_ease-out_0.5s_forwards]"></span>
+          </span>
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-400 mt-4">
+          <span class="text-gray-400">Technologies I work with to</span>
+          <span class="gradient-text font-semibold"> bring ideas to life</span>
+        </p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-12 py-8">
+        <!-- TypeScript -->
+        <div class="skill-badge group" style="--skill-color: #3178C6; --skill-color-rgb: 49, 120, 198;">
+          <span class="skill-icon" style="color: #3178C6;">TS</span>
+          <span class="skill-name">TypeScript</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- JavaScript -->
+        <div class="skill-badge group" style="--skill-color: #F7DF1E; --skill-color-rgb: 247, 223, 30;">
+          <span class="skill-icon" style="color: #F7DF1E;">JS</span>
+          <span class="skill-name">JavaScript</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- Angular -->
+        <div class="skill-badge group" style="--skill-color: #DD0031; --skill-color-rgb: 221, 0, 49;">
+          <span class="skill-icon" style="color: #DD0031;">NG</span>
+          <span class="skill-name">Angular</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- NestJS -->
+        <div class="skill-badge group" style="--skill-color: #E0234E; --skill-color-rgb: 224, 35, 78;">
+          <span class="skill-icon" style="color: #E0234E;">NS</span>
+          <span class="skill-name">NestJS</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- Ionic -->
+        <div class="skill-badge group" style="--skill-color: #3880FF; --skill-color-rgb: 56, 128, 255;">
+          <span class="skill-icon" style="color: #3880FF;">IO</span>
+          <span class="skill-name">Ionic</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- MySQL -->
+        <div class="skill-badge group" style="--skill-color: #4479A1; --skill-color-rgb: 68, 121, 161;">
+          <span class="skill-icon" style="color: #4479A1;">SQL</span>
+          <span class="skill-name">MySQL</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- HTML5 -->
+        <div class="skill-badge group" style="--skill-color: #E34F26; --skill-color-rgb: 227, 79, 38;">
+          <span class="skill-icon" style="color: #E34F26;">HTML</span>
+          <span class="skill-name">HTML5</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- CSS3 -->
+        <div class="skill-badge group" style="--skill-color: #1572B6; --skill-color-rgb: 21, 114, 182;">
+          <span class="skill-icon" style="color: #1572B6;">CSS</span>
+          <span class="skill-name">CSS3</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- SCSS -->
+        <div class="skill-badge group" style="--skill-color: #CC6699; --skill-color-rgb: 204, 102, 153;">
+          <span class="skill-icon" style="color: #CC6699;">SCSS</span>
+          <span class="skill-name">SCSS</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- Biometric API -->
+        <div class="skill-badge group" style="--skill-color: #00D4FF; --skill-color-rgb: 0, 212, 255;">
+          <span class="skill-icon" style="color: #00D4FF;">BIO</span>
+          <span class="skill-name">Biometric API</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- API Integration -->
+        <div class="skill-badge group" style="--skill-color: #FF6B6B; --skill-color-rgb: 255, 107, 107;">
+          <span class="skill-icon" style="color: #FF6B6B;">API</span>
+          <span class="skill-name">API Integration</span>
+          <div class="skill-shine"></div>
+        </div>
+        <!-- ER Diagram -->
+        <div class="skill-badge group" style="--skill-color: #4ECDC4; --skill-color-rgb: 78, 205, 196;">
+          <span class="skill-icon" style="color: #4ECDC4;">ER</span>
+          <span class="skill-name">ER Diagram</span>
+          <div class="skill-shine"></div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 pt-12 border-t border-dark-border">
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          I'm constantly learning and expanding my skill set to stay current
+          with the latest technologies and best practices in web development.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-surface">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-accent-primary">Featured Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project 1 -->
+        <div class="project-card glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-all duration-300 hover:-translate-y-2">
+          <h3 class="text-2xl font-semibold mb-3 text-accent-primary group-hover:text-accent-hover transition-colors">Attendance Management System</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            A comprehensive attendance management system with biometric integration (API & Parallel DB). Features include real-time tracking, reporting, and seamless integration with external systems. Developed over 2.7 years with focus on scalability and reliability.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Web Application:</p>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">Angular</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">MySQL</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Mobile Application:</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">Ionic</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-all duration-300 hover:-translate-y-2">
+          <h3 class="text-2xl font-semibold mb-3 text-accent-primary group-hover:text-accent-hover transition-colors">Food Ordering Platform</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            A food delivery platform similar to Swiggy and Zomato. Features include restaurant listings, menu management, order tracking, payment integration, and real-time notifications. Built with modern web technologies and responsive design.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Web Application:</p>
+            <div class="flex flex-wrap gap-2 mb-3">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">Angular</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">PostgreSQL</span>
+            </div>
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Mobile Application:</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">Ionic</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-all duration-300 hover:-translate-y-2">
+          <h3 class="text-2xl font-semibold mb-3 text-accent-primary group-hover:text-accent-hover transition-colors">Finance Management System</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            A comprehensive finance management application for tracking expenses, income, budgets, and financial reports. Features include data visualization, reporting, and secure transaction handling.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Web Application:</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">Angular</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card glass border border-dark-border rounded-lg p-6 hover:border-accent-primary transition-all duration-300 hover:-translate-y-2">
+          <h3 class="text-2xl font-semibold mb-3 text-accent-primary group-hover:text-accent-hover transition-colors">US Event Management System</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">
+            An event management system for organizing and managing events. Features include event creation, attendee management, ticketing, and real-time updates. Built with focus on user experience and performance.
+          </p>
+          <div class="mb-4">
+            <p class="text-sm text-gray-500 mb-2 font-semibold">Backend Only:</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">NestJS</span>
+              <span class="px-3 py-1 bg-dark-surface text-gray-300 rounded-full text-sm border border-dark-border">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-bg relative overflow-hidden">
+    <!-- Background Blobs -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-accent-primary/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent-secondary/10 rounded-full blur-3xl animate-float" style="animation-delay: -10s;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text relative inline-block">
+          <span class="relative">
+            Get In Touch
+            <span class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-primary to-accent-secondary rounded transform scale-x-0 animate-[scaleX_1s_ease-out_0.5s_forwards]"></span>
+          </span>
+        </h2>
+        <p class="text-xl text-gray-400 mt-4">Let's create something amazing together</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="glass border border-dark-border rounded-2xl p-8 hover:border-accent-primary/40 transition-all duration-300 hover:-translate-y-1">
+          <h3 class="text-2xl font-semibold mb-4 text-accent-primary flex items-center gap-2">
+            <span>💬</span>
+            Let's Connect
+          </h3>
+          <p class="text-gray-400 leading-relaxed mb-8">
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your visions. Feel free to reach out!
+          </p>
+
+          <div class="space-y-6">
+            <a href="mailto:ajith.ak.official06@gmail.com" class="contact-card-item group">
+              <div class="contact-icon-box bg-gradient-to-br from-red-600 to-red-700">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 12.713l-11-8.713v16.587h22v-16.587l-11 8.713zm-5.425-1.822l-6.575-5.229v12.501l6.575-7.272zm10.85 0l6.575 7.271v-12.501l-6.575 5.23zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Email</p>
+                <p class="text-gray-200 font-semibold">ajith.ak.official06@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="tel:+919965629155" class="contact-card-item group">
+              <div class="contact-icon-box bg-gradient-to-br from-green-600 to-green-700">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Phone</p>
+                <p class="text-gray-200 font-semibold">+91 99656 29155</p>
+              </div>
+            </a>
+
+            <a href="https://wa.me/919965629155" target="_blank" rel="noopener noreferrer" class="contact-card-item group">
+              <div class="contact-icon-box bg-gradient-to-br from-green-500 to-teal-600">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">WhatsApp</p>
+                <p class="text-gray-200 font-semibold">+91 99656 29155</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contact-form" action="#" method="POST" class="glass border border-dark-border rounded-2xl p-8 hover:border-accent-primary/40 transition-all duration-300">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-semibold text-gray-200 mb-2">Send a Message</h3>
+            <p class="text-gray-400 text-sm">Fill out the form below and I'll get back to you</p>
+          </div>
+
+          <div id="submit-message" class="hidden mb-4 p-3 rounded-lg text-sm text-center" role="alert" aria-live="polite"></div>
+
+          <!-- Hidden fields for Formspree -->
+          <input type="hidden" name="_to" value="ajith.ak.official06@gmail.com">
+          <input type="hidden" name="_subject" value="Portfolio Contact Form Submission">
+          <input type="hidden" name="_format" value="plain">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="space-y-6">
+            <div class="form-group">
+              <div class="input-wrapper relative">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  minlength="2"
+                  maxlength="100"
+                  class="form-input w-full px-4 py-3 bg-dark-surface border-2 border-dark-border rounded-lg text-gray-200 focus:outline-none focus:border-accent-primary transition-colors"
+                  placeholder=" "
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="name-error"
+                />
+                <input type="hidden" name="_replyto" id="replyto" value="">
+                <span id="name-error" class="sr-only" role="alert"></span>
+                <label for="name" class="form-label absolute left-4 top-3 text-gray-400 pointer-events-none transition-all duration-300">Your Name</label>
+                <span class="input-border absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-accent-primary to-accent-secondary transform scale-x-0 transition-transform duration-300"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-wrapper relative">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  maxlength="254"
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                  class="form-input w-full px-4 py-3 bg-dark-surface border-2 border-dark-border rounded-lg text-gray-200 focus:outline-none focus:border-accent-primary transition-colors"
+                  placeholder=" "
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="email-error"
+                />
+                <span id="email-error" class="sr-only" role="alert"></span>
+                <label for="email" class="form-label absolute left-4 top-3 text-gray-400 pointer-events-none transition-all duration-300">Your Email</label>
+                <span class="input-border absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-accent-primary to-accent-secondary transform scale-x-0 transition-transform duration-300"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-wrapper relative">
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="10"
+                  maxlength="2000"
+                  rows="5"
+                  class="form-input w-full px-4 py-3 bg-dark-surface border-2 border-dark-border rounded-lg text-gray-200 focus:outline-none focus:border-accent-primary transition-colors resize-none"
+                  placeholder=" "
+                  aria-required="true"
+                  aria-describedby="message-error"
+                ></textarea>
+                <span id="message-error" class="sr-only" role="alert"></span>
+                <label for="message" class="form-label absolute left-4 top-3 text-gray-400 pointer-events-none transition-all duration-300">Your Message</label>
+                <span class="input-border absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-accent-primary to-accent-secondary transform scale-x-0 transition-transform duration-300"></span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              id="submit-button"
+              class="w-full px-8 py-3 bg-gradient-to-r from-accent-primary to-accent-secondary text-white rounded-lg font-semibold hover:from-accent-hover hover:to-accent-secondary transition-all duration-300 shadow-lg shadow-accent-primary/30 hover:scale-105 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <span class="flex items-center justify-center gap-2">
+                <span>Send Message</span>
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark-surface border-t border-dark-border py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">© <span id="current-year"></span> Portfolio. All rights reserved.</p>
+
+        <div class="flex space-x-6">
+          <a href="https://x.com/03_mct60800" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="X (Twitter)" aria-label="X (Twitter)">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ajith-kumar-0127-ak/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="LinkedIn" aria-label="LinkedIn">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/ajithkumarramalingam" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent-primary transition-all duration-300 hover:scale-125 hover:-translate-y-1" title="GitHub" aria-label="GitHub">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
+  <script>
+    // Set current year - Safe DOM manipulation
+    document.addEventListener('DOMContentLoaded', () => {
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
+
