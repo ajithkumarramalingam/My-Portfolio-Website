@@ -29,25 +29,27 @@ if (mobileMenuButton) {
   mobileMenuButton.addEventListener('click', () => {
     isMobileMenuOpen = !isMobileMenuOpen;
     if (isMobileMenuOpen) {
-      mobileMenu.classList.add('open');
-      mobileMenuButton.classList.add('active');
+      if (mobileMenu) mobileMenu.classList.add('open');
+      if (mobileMenuButton) mobileMenuButton.classList.add('active');
       document.body.style.overflow = 'hidden';
     } else {
-      mobileMenu.classList.remove('open');
-      mobileMenuButton.classList.remove('active');
+      if (mobileMenu) mobileMenu.classList.remove('open');
+      if (mobileMenuButton) mobileMenuButton.classList.remove('active');
       document.body.style.overflow = '';
     }
   });
   
   // Close mobile menu when clicking on a link
-  mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      isMobileMenuOpen = false;
-      mobileMenu.classList.remove('open');
-      mobileMenuButton.classList.remove('active');
-      document.body.style.overflow = '';
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        isMobileMenuOpen = false;
+        if (mobileMenu) mobileMenu.classList.remove('open');
+        if (mobileMenuButton) mobileMenuButton.classList.remove('active');
+        document.body.style.overflow = '';
+      });
     });
-  });
+  }
 }
 
 // Active nav link highlighting based on scroll position
@@ -342,11 +344,42 @@ if (contactForm) {
     if (!submitButton) return;
     
     submitButton.disabled = true;
-    const originalButtonContent = submitButton.innerHTML;
-    submitButton.innerHTML = '';
+    // Store original button content safely (store children as array)
+    const originalButtonChildren = Array.from(submitButton.childNodes).map(node => node.cloneNode(true));
+    // Clear button content safely
+    while (submitButton.firstChild) {
+      submitButton.removeChild(submitButton.firstChild);
+    }
+    // Create loading state safely
     const loadingSpan = document.createElement('span');
     loadingSpan.className = 'flex items-center justify-center gap-2';
-    loadingSpan.innerHTML = '<span>Sending...</span><svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+    
+    const loadingText = document.createElement('span');
+    loadingText.textContent = 'Sending...';
+    
+    const loadingSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    loadingSvg.setAttribute('class', 'animate-spin h-5 w-5');
+    loadingSvg.setAttribute('fill', 'none');
+    loadingSvg.setAttribute('viewBox', '0 0 24 24');
+    loadingSvg.setAttribute('aria-hidden', 'true');
+    
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('class', 'opacity-25');
+    circle.setAttribute('cx', '12');
+    circle.setAttribute('cy', '12');
+    circle.setAttribute('r', '10');
+    circle.setAttribute('stroke', 'currentColor');
+    circle.setAttribute('stroke-width', '4');
+    
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('class', 'opacity-75');
+    path.setAttribute('fill', 'currentColor');
+    path.setAttribute('d', 'M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z');
+    
+    loadingSvg.appendChild(circle);
+    loadingSvg.appendChild(path);
+    loadingSpan.appendChild(loadingText);
+    loadingSpan.appendChild(loadingSvg);
     submitButton.appendChild(loadingSpan);
 
     // Update reply-to field
@@ -383,7 +416,13 @@ if (contactForm) {
           contactForm.reset();
           resetFormLabels();
           submitButton.disabled = false;
-          submitButton.innerHTML = originalButtonContent;
+          // Restore button content safely
+          while (submitButton.firstChild) {
+            submitButton.removeChild(submitButton.firstChild);
+          }
+          originalButtonChildren.forEach(child => {
+            submitButton.appendChild(child.cloneNode(true));
+          });
         } else {
           let errorMessage = 'Failed to send message. ';
           try {
@@ -403,7 +442,7 @@ if (contactForm) {
           throw new Error(errorMessage);
         }
       } catch (error) {
-        handleSubmissionError(error, submitButton, originalButtonContent);
+        handleSubmissionError(error, submitButton, originalButtonChildren);
       }
     } else if (useFormSubmit) {
       // Use FormSubmit (works immediately - no signup needed!)
@@ -432,7 +471,13 @@ if (contactForm) {
             contactForm.reset();
             resetFormLabels();
             submitButton.disabled = false;
-            submitButton.innerHTML = originalButtonContent;
+            // Restore button content safely
+            while (submitButton.firstChild) {
+              submitButton.removeChild(submitButton.firstChild);
+            }
+            originalButtonChildren.forEach(child => {
+              submitButton.appendChild(child.cloneNode(true));
+            });
           } else {
             throw new Error(result.message || 'Failed to send message');
           }
@@ -440,7 +485,7 @@ if (contactForm) {
           throw new Error(`Server error: ${response.status}`);
         }
       } catch (error) {
-        handleSubmissionError(error, submitButton, originalButtonContent);
+        handleSubmissionError(error, submitButton, originalButtonChildren);
       }
     } else {
       // No email service configured
@@ -455,7 +500,13 @@ if (contactForm) {
       
       showMessage(setupMessage, 'error');
       submitButton.disabled = false;
-      submitButton.innerHTML = originalButtonContent;
+      // Restore button content safely
+      while (submitButton.firstChild) {
+        submitButton.removeChild(submitButton.firstChild);
+      }
+      originalButtonChildren.forEach(child => {
+        submitButton.appendChild(child.cloneNode(true));
+      });
     }
   });
 }
@@ -470,7 +521,7 @@ function resetFormLabels() {
 }
 
 // Helper function to handle submission errors
-function handleSubmissionError(error, submitButton, originalButtonContent) {
+function handleSubmissionError(error, submitButton, originalButtonChildren) {
   if (typeof console !== 'undefined' && console.error) {
     console.error('Form submission error:', error);
   }
@@ -488,11 +539,42 @@ function handleSubmissionError(error, submitButton, originalButtonContent) {
   
   if (submitButton) {
     submitButton.disabled = false;
-    if (originalButtonContent) {
-      submitButton.innerHTML = originalButtonContent;
+    // Clear button content safely
+    while (submitButton.firstChild) {
+      submitButton.removeChild(submitButton.firstChild);
+    }
+    
+    if (originalButtonChildren && Array.isArray(originalButtonChildren)) {
+      // Restore original content safely
+      originalButtonChildren.forEach(child => {
+        submitButton.appendChild(child.cloneNode(true));
+      });
     } else {
-      // Fallback button content
-      submitButton.innerHTML = '<span class="flex items-center justify-center gap-2"><span>Send Message</span><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></span>';
+      // Fallback button content - create safely
+      const fallbackSpan = document.createElement('span');
+      fallbackSpan.className = 'flex items-center justify-center gap-2';
+      
+      const fallbackText = document.createElement('span');
+      fallbackText.textContent = 'Send Message';
+      
+      const fallbackSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      fallbackSvg.setAttribute('width', '20');
+      fallbackSvg.setAttribute('height', '20');
+      fallbackSvg.setAttribute('fill', 'none');
+      fallbackSvg.setAttribute('stroke', 'currentColor');
+      fallbackSvg.setAttribute('viewBox', '0 0 24 24');
+      fallbackSvg.setAttribute('aria-hidden', 'true');
+      
+      const fallbackPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      fallbackPath.setAttribute('stroke-linecap', 'round');
+      fallbackPath.setAttribute('stroke-linejoin', 'round');
+      fallbackPath.setAttribute('stroke-width', '2');
+      fallbackPath.setAttribute('d', 'M14 5l7 7m0 0l-7 7m7-7H3');
+      
+      fallbackSvg.appendChild(fallbackPath);
+      fallbackSpan.appendChild(fallbackText);
+      fallbackSpan.appendChild(fallbackSvg);
+      submitButton.appendChild(fallbackSpan);
     }
   }
 }
