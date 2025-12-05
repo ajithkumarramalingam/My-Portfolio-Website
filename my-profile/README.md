@@ -31,7 +31,7 @@ A modern, responsive developer portfolio built with plain HTML and Tailwind CSS.
 
 1. Navigate to the project directory:
 ```bash
-cd html-version
+cd my-profile
 ```
 
 2. Install dependencies:
@@ -68,7 +68,7 @@ The production files will be in the `dist` folder.
 ## Project Structure
 
 ```
-html-version/
+my-profile/
 ├── index.html          # Main HTML file
 ├── css/
 │   ├── input.css      # Tailwind input file

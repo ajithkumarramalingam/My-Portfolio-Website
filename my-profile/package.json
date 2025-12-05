@@ -1,11 +1,12 @@
 {
-  "name": "portfolio-html-tailwind",
+  "name": "my-profile",
   "version": "1.0.0",
   "description": "Developer Portfolio - HTML + Tailwind CSS",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify",
+    "preview": "vite preview",
+    "vercel-build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --minify"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",

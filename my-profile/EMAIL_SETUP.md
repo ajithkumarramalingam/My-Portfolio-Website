@@ -42,7 +42,7 @@ Formspree provides better analytics and spam protection.
    - Copy the Form ID: `xrgkqjpn` (the part after `/f/`)
 
 4. **Update the Code**:
-   - Open: `html-version/js/main.js`
+   - Open: `my-profile/js/main.js`
    - Find line 283:
      ```javascript
      const FORMPREE_FORM_ID = 'YOUR_FORM_ID';

@@ -4,10 +4,10 @@ A modern, responsive developer portfolio built with plain HTML and Tailwind CSS.
 
 ## 🚀 Quick Start
 
-Navigate to the `html-version` folder:
+Navigate to the `my-profile` folder:
 
 ```bash
-cd html-version
+cd my-profile
 npm install
 npx tailwindcss -i ./css/input.css -o ./css/output.css --watch
 # In another terminal:
@@ -20,15 +20,12 @@ The portfolio will be available at `http://localhost:3000`
 
 ```
 my-portfolio/
-├── html-version/          # Main portfolio (HTML + Tailwind CSS)
+├── my-profile/            # Main portfolio (HTML + Tailwind CSS)
 │   ├── index.html         # All sections in one file
 │   ├── css/               # Tailwind CSS files
 │   ├── js/                # JavaScript functionality
 │   └── ...
-├── README.md              # This file
-├── CODE_REVIEW.md         # Code review documentation
-├── SECURITY.md            # Security best practices
-└── HOW_TO_GET_PROFILE_LINKS.md  # Guide for social links
+└── README.md              # This file
 ```
 
 ## ✨ Features
@@ -44,9 +41,8 @@ my-portfolio/
 
 ## 📖 Documentation
 
-- **Setup Guide**: See `html-version/SETUP_GUIDE.md` for detailed setup instructions
-- **Code Review**: See `CODE_REVIEW.md` for security and code quality notes
-- **Security**: See `SECURITY.md` for security best practices
+- **Setup Guide**: See `my-profile/README.md` for detailed setup instructions
+- **Email Setup**: See `my-profile/EMAIL_SETUP.md` for contact form configuration
 
 ## 🛠️ Tech Stack
 
